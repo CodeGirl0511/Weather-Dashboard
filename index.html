@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!---BootStrap--> 
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+   <!--FontAwesome-->
+   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"
+   integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
+
+
+    <title>Weather Dashboard</title>
+</head>
+<body> 
+    <div class="container.fluid"> 
+    <div class="row">
+    <div class="col-sm-12" id="siteHeader">
+        <h1>Weather Dashboard</h1>
+    </div>
+    </div>
+        <main>
+    <div class="row">
+     <div id="searchCol" class="col-sm-12 col-md-3">
+<!-- <-------> 
+ <form>
+    <div class="form-group pl-3 pr-3 pt-3">
+       <h2>Search for a City:</h2>
+    <div class="input-group mb-3">
+    <input id="userCityInput" type="text" class="form-control"
+         aria-label="Search for a city">
+    <div class="input-group-append">
+   <button id="citySearchSubmit" class="btn btn-primary" type="button"><i
+    class="fas fa-search"></i></button>
+    </div>
+    </div>
+    </div>
+</form>
+<!-- <----------> 
+                    <div class="card">
+                    <div class="card-body">
+                    <h3 id="cityName">City Name</h3>
+                            <p>Temperature: <span id="temperature"></span></p>
+                            <p>Humidity: <span id="humidity"></span> </p>
+                            <p>Wind Speed: <span id="windSpeed"></span></p>
+                            <p>UV Index: <span id="UVIndex"></span></p>
+                    </div>
+                    </div>
+                    <ul class="list-group pl-3" id="searchHistoryUl">
+                    </ul>
+                </div>
+                <div class="col-sm-12 col-md-9 mt-4">
+
+                    <!-- 5 day weather forcast-->
+                    <div class="row">
+                        <h3 id="weekHeader">5-Day Forecast</h3>
+                        <div class="col-xs-12" id="weekForecastContainer">
+
+                            <div class="weekForecast card text-white bg-primary mb-3">
+                                <div class="card-body">
+                                    <h5 id="D1Date" class="card-title"></h5>
+                                    <span id="D1Icon"></span>
+                                    <p id="D1Temp" class="card-text"></p>
+                                    <p id="D1Humidity" class="card-text"></p>
+                                </div>
+                            </div>
+                            <div class="weekForecast card text-white bg-primary mb-3">
+                                <div class="card-body">
+                                    <h5 id="D2Date" class="card-title"></h5>
+                                    <span id="D2Icon"></span>
+                                    <p id="D2Temp" class="card-text"></p>
+                                    <p id="D2Humidity" class="card-text"></p>
+                                </div>
+                            </div>
+                            <div class="weekForecast card text-white bg-primary mb-3">
+                                <div class="card-body">
+                                    <h5 id="D3Date" class="card-title"></h5>
+                                    <span id="D3Icon"></span>
+                                    <p id="D3Temp" class="card-text"></p>
+                                    <p id="D3Humidity" class="card-text"></p>
+                                </div>
+                            </div>
+                            <div class="weekForecast card text-white bg-primary mb-3">
+                                <div class="card-body">
+                                    <h5 id="D4Date" class="card-title"></h5>
+                                    <span id="D4Icon"></span>
+                                    <p id="D4Temp" class="card-text"></p>
+                                    <p id="D4Humidity" class="card-text"></p>
+                                </div>
+                            </div>
+                            <div class="weekForecast card text-white bg-primary mb-3">
+                                <div class="card-body">
+                                    <h5 id="D5Date" class="card-title"></h5>
+                                    <span id="D5Icon"></span>
+                                    <p id="D5Temp" class="card-text"></p>
+                                    <p id="D5Humidity" class="card-text"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <!-- jQuery,Popper.js,Bootstrap JS,Moment.js -->
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/moment@2.25.3/moment.min.js"></script>
+
+    <!-- Custom script -->
+    <script src="./Develop/script.js"></script>
+
+</body>
+
+</html>
