@@ -5,52 +5,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!---BootStrap-->
+    <!---BootStrap--> 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-    <!--FontAwesome-->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"
-        integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
+   <!--FontAwesome-->
+   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"
+   integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
 
 
     <title>Weather Dashboard</title>
 </head>
-
-<body>
-    <div class="container.fluid">
-        <div class="row">
-            <div class="col-sm-12" id="siteHeader">
-                <h1>Weather Dashboard</h1>
-            </div>
-        </div>
+<body> 
+    <div class="container.fluid"> 
+    <div class="row">
+    <div class="col-sm-12" id="siteHeader">
+        <h1>Weather Dashboard</h1>
+    </div>
+    </div>
         <main>
-            <div class="row">
-                <div id="searchCol" class="col-sm-12 col-md-3">
-                    <!-- <------->
-                    <form>
-                        <div class="form-group pl-3 pr-3 pt-3">
-                            <h2>Search for a City:</h2>
-                            <div class="input-group mb-3">
-
-                                <input id="userCityInput" type="text" class="form-control"
-                                    aria-label="Search for a city">
-                                <div class="input-group-append">
-
-                                    <button id="citySearchSubmit" class="btn btn-primary" type="button"><i
-                                            class="fas fa-search"></i></button>
-                                </div>
-                            </div>
-                    </form>
-                    <!-- <---------->
+    <div class="row">
+     <div id="searchCol" class="col-sm-12 col-md-3">
+<!-- <-------> 
+ <form>
+    <div class="form-group pl-3 pr-3 pt-3">
+       <h2>Search for a City:</h2>
+    <div class="input-group mb-3">
+   
+        <input id="userCityInput" type="text" class="form-control"
+         aria-label="Search for a city">
+    <div class="input-group-append">
+   
+        <button id="citySearchSubmit" class="btn btn-primary" type="button"><i
+    class="fas fa-search"></i></button>
+    </div>
+    </div>
+</form>
+<!-- <----------> 
                     <div class="card">
-                        <div class="card-body" id='cityDate'>
-                            <h3 id="#cityName">City Name</h3>
+                    <div class="card-body" id= 'cityDate'
+                    <h3 id="#cityName">City Name</h3>
                             <p>Temperature: <span id="temperature"></span></p>
                             <p>Humidity: <span id="humidity"></span> </p>
                             <p>Wind Speed: <span id="windSpeed"></span></p>
                             <p>UV Index: <span id="UVIndex"></span></p>
-                        </div>
+                    </div>
                     </div>
                     <ul class="list-group pl-3" id="searchHistoryUl">
                     </ul>
