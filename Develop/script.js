@@ -3,7 +3,7 @@ $(document).ready(function () {
     function getWeather(City) {
   
       $.ajax({
-        url: 'https://api.openweathermap.org/data/2.5/forecast?q=' + City + "api_key=19e5fc4a4d7613a575bc5901cff288a9",
+        url: 'https://api.openweathermap.org/data/2.5/forecast?q=' + City + "&appid=19e5fc4a4d7613a575bc5901cff288a9",
         type:"GET",
         datatype: "json",
         success: function (data) {
@@ -34,9 +34,7 @@ $(document).ready(function () {
       });
   
       $.ajax({
-        url: 'https://api.openweathermap.org/data/2.5/forecast?q=' + City + "api_key=19e5fc4a4d7613a575bc5901cff288a9",
-        type: "GET",
-        datatype: "json",
+        url: 'https://api.openweathermap.org/data/2.5/forecast?q=' + City + "&appid=19e5fc4a4d7613a575bc5901cff288a9",        datatype: "json",
         success: function (data) {
           console.log(data);
         }
