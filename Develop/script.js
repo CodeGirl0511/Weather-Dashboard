@@ -1,9 +1,9 @@
 
 $(document).ready(function () {
-    function getWeather(City) {
+    function getWeather(city) {
   
       $.ajax({
-        url: 'https://api.openweathermap.org/data/2.5/forecast?q=' + City + "&appid=19e5fc4a4d7613a575bc5901cff288a9",
+        url: 'https://api.openweathermap.org/data/2.5/forecast?q=' + city + "&appid=19e5fc4a4d7613a575bc5901cff288a9",
         type:"GET",
         datatype: "json",
         success: function (data) {
@@ -34,7 +34,7 @@ $(document).ready(function () {
       });
   
       $.ajax({
-        url: 'https://api.openweathermap.org/data/2.5/forecast?q=' + City + "&appid=19e5fc4a4d7613a575bc5901cff288a9",        datatype: "json",
+        url: 'https://api.openweathermap.org/data/2.5/forecast?q=' + city + "&appid=19e5fc4a4d7613a575bc5901cff288a9",        datatype: "json",
         success: function (data) {
           console.log(data);
         }
@@ -61,17 +61,17 @@ $(document).ready(function () {
           }
         });
     }
-    $('#button').click(function () {
+    $('#citySearchSubmit').click(function () {
   
-      var city = $("#cityName").val();
+      var City = $("#cityName").val();
   
-      console.log(city);
-      getWeather(city);
+      console.log(City);
+      getWeather(City);
   
-      var Item = $("<li>").text(city);
+      var Item = $("<li>").text(City);
       $("#cityList").prepend(Item);
       Item.on("click", function () {
-        getWeather(city);
+        getWeather(City);
   
       });
   
