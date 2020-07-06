@@ -3,16 +3,17 @@ $(document).ready(function () {
     function getWeather(city) {
   
       $.ajax({
-        url: 'https://api.openweathermap.org/data/2.5/forecast?q=' + city + "&appid=19e5fc4a4d7613a575bc5901cff288a9",
+        url: 'https://api.openweathermap.org/data/2.5/weather?q=' + city + "&appid=19e5fc4a4d7613a575bc5901cff288a9",
         type:"GET",
         datatype: "json",
-        success: function (data) {
-          console.log(data);
-        }
+        // success: function (data) {
+        //   console.log(data);
+        // }
   
       }).then(function (response) {
+        console.log(response)
         $("#citydate").empty();
-        var city = $("<div class'city'>");
+        var city = $("<div class='city'>");
   
         var name = response.name;
         var Four = $("<p>").text(name);
@@ -28,13 +29,13 @@ $(document).ready(function () {
   
         var wind = response.wind.speed;
         var Three = $("<p>").text("Wind Speed: " + wind);
-        city.append(three);
+        city.append(Three);
   
         $("#cityDate").prepend(city); 
       });
   
       $.ajax({
-        url: 'https://api.openweathermap.org/data/2.5/forecast?q=' + city + "&appid=19e5fc4a4d7613a575bc5901cff288a9",        datatype: "json",
+        url: 'https://api.openweathermap.org/data/2.5/forecast?q=' + city + "&appid=19e5fc4a4d7613a575bc5901cff288a9", datatype: "json",
         success: function (data) {
           console.log(data);
         }
@@ -61,9 +62,9 @@ $(document).ready(function () {
           }
         });
     }
-    $('#citySearchSubmit').click(function () {
+    $('button').click(function () {
   
-      var City = $("#cityName").val();
+      var City = $("#userCityInput").val();
   
       console.log(City);
       getWeather(City);
